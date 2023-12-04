@@ -8,7 +8,11 @@ public class Game_Manager : MonoBehaviour
 {
     public int money;
 
+    public int money_gatcha;
+
     public TextMeshProUGUI money_text;
+
+    public TextMeshProUGUI money_gatcha_text;
 
     public static Game_Manager instance;
 
@@ -27,5 +31,17 @@ public class Game_Manager : MonoBehaviour
     {
         money -= amount;
         money_text.text = "€" + money.ToString();
+    }
+
+    public void add_money_gatcha(int amout)
+    {
+        money_gatcha += amout;
+        money_gatcha_text.text = "C" + money_gatcha.ToString();
+    }
+
+    public void take_money_gatcha(int amout)
+    {
+        money_gatcha -= amout;
+        money_gatcha_text.text = "C" + money_gatcha.ToString();
     }
 }

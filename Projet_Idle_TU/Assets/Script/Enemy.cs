@@ -29,5 +29,9 @@ public class Enemy : MonoBehaviour
         Game_Manager.instance.add_money(money_drop);
         Enemy_Manager.instance.Replace_Enemy(gameObject);
         //Debug.Log("hehe");
+        if (Random.Range(1,100) >= 99)
+        {
+            Game_Manager.instance.add_money_gatcha(money_drop);
+        }
     }
 }
