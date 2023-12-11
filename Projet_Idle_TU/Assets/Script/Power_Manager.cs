@@ -5,16 +5,17 @@ using UnityEngine.UI;
 
 public class Power_Manager : MonoBehaviour
 {
-    public Enemy mob_hp;
+    public EnnemyOnScene enemy;
 
     public void Power_Explosion()
     {
-        mob_hp = FindObjectOfType<Enemy>();
-        mob_hp.cur_HP -= 15;
+        //enemy = FindObjectOfType<EnnemyOnScene>();
+        enemy.cur_HP -= 15;
+        enemy.FeedbackHealthbar();
 
-        if (mob_hp.cur_HP <= 0)
+        if (enemy.cur_HP <= 0)
         {
-            mob_hp.Caught();
+            enemy.Caught();
         }
 
     }

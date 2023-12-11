@@ -11,6 +11,8 @@ public class Auto_Clicker_Manager : MonoBehaviour
 
     public TextMeshProUGUI quantity_text;
 
+    public EnnemyOnScene enemy;
+
 
     void Update()
     {
@@ -20,7 +22,7 @@ public class Auto_Clicker_Manager : MonoBehaviour
             if(Time.time - auto_clicker[i] >= 1.0f)
             {
                 auto_clicker[i] = Time.time;
-                Enemy_Manager.instance.cur_enemy.Dammage();
+                enemy.Dammage();
             }
         }
     }
