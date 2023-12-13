@@ -8,6 +8,7 @@ public class Score_Manger : MonoBehaviour
 {
     public TextMeshProUGUI texte_score;
     public int score_joueur;
+    public EnnemyOnScene enemy;
 
 
 
@@ -15,5 +16,4 @@ public class Score_Manger : MonoBehaviour
     {
         texte_score.text = "" + score_joueur;
     }
-
 }
