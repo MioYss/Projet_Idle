@@ -7,8 +7,6 @@ public class EnnemyOnScene : MonoBehaviour
 {
     public int cur_HP;
 
-    public int max_HP_cur;
-
     public Image health_bar_fill;
 
     public Data_Enemy[] enemy_to_spawn;
@@ -48,6 +46,10 @@ public class EnnemyOnScene : MonoBehaviour
             Caught();
         }
     }
+    public void OneShot()
+    {
+        Dammage(cur_enemy.max_HP);
+    }
     public void Dammage()
     {
         Dammage(1);
@@ -67,11 +69,6 @@ public class EnnemyOnScene : MonoBehaviour
         {
             Game_Manager.instance.add_money_gatcha(cur_enemy.money_drop);
         }
-    }
-
-    private void Update()
-    {
-        max_HP_cur = cur_enemy.max_HP;
     }
 
 }
