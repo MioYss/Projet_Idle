@@ -10,13 +10,7 @@ public class Power_Manager : MonoBehaviour
     public void Power_Explosion()
     {
         //enemy = FindObjectOfType<EnnemyOnScene>();
-        enemy.cur_HP -= 15;
-        enemy.FeedbackHealthbar();
-
-        if (enemy.cur_HP <= 0)
-        {
-            enemy.Caught();
-        }
+        enemy.Dammage(9999);
 
     }
 }

@@ -32,15 +32,19 @@ public class EnnemyOnScene : MonoBehaviour
         FeedbackHealthbar();
     }
 
-    public void Dammage()
+    public void Dammage(int amount)
     {
-        cur_HP--;
+        cur_HP-= amount;
         FeedbackHealthbar();
 
-        if(cur_HP<= 0)
+        if (cur_HP <= 0)
         {
             Caught();
         }
+    }
+    public void Dammage()
+    {
+        Dammage(1);
     }
 
     public void FeedbackHealthbar()

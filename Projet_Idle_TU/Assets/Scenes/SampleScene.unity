@@ -1494,7 +1494,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1007405198}
         m_TargetAssemblyTypeName: Power_Manager, Assembly-CSharp
         m_MethodName: Power_Explosion
         m_Mode: 1
