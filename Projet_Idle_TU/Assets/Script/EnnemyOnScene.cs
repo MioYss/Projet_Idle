@@ -50,6 +50,11 @@ public class EnnemyOnScene : MonoBehaviour
     {
         Dammage(cur_enemy.max_HP);
     }
+
+    public void Fireball()
+    {
+        Dammage(15);
+    }
     public void Dammage()
     {
         Dammage(1);

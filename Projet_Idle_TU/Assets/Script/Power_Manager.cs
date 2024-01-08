@@ -13,4 +13,10 @@ public class Power_Manager : MonoBehaviour
         enemy.OneShot();
 
     }
+
+    public void Power_Fireball()
+    {
+        enemy.Fireball();
+
+    }
 }
