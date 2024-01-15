@@ -8,6 +8,8 @@ public class Game_Manager : MonoBehaviour
 {
     public int money;
 
+    public int enemy_dead;
+
     public int money_gatcha;
 
     public TextMeshProUGUI money_text;
@@ -25,6 +27,7 @@ public class Game_Manager : MonoBehaviour
     {
         money += amount;
         money_text.text = "€" + money.ToString();
+        enemy_dead ++;
     }
 
     public void take_money(int amount)

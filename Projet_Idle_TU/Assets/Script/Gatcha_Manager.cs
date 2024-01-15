@@ -8,6 +8,8 @@ public class Gatcha_Manager : MonoBehaviour
 
     public WeightedList<Data_Gatcha> drop_gatcha;
 
+    public Game_Manager number_enemy;
+
     // Start is called before the first frame update
     public void Unlock_Liste()
     {
@@ -18,7 +20,28 @@ public class Gatcha_Manager : MonoBehaviour
     {
 
         drop_gatcha.GetRandomElement();
+        Debug.Log("ta drop");
 
     }
 
+    private void Update()
+    {
+        /*if (number_enemy.enemy_dead >= 10)
+        {
+            ScriptableObject.June.weight == 1;
+
+            else
+
+            ScriptableObject.June.weight == 0;
+        }
+
+        if (number_enemy.enemy_dead >= 50)
+        {
+            ScriptableObject.April.weight == 10;
+
+            else
+
+            ScriptableObject.April.weight == 0;
+        }*/
+    }
 }
