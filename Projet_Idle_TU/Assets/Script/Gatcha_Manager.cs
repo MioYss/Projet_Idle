@@ -24,24 +24,13 @@ public class Gatcha_Manager : MonoBehaviour
 
     }
 
-    private void Update()
+    public void up_oods_gatcha()
     {
-        /*if (number_enemy.enemy_dead >= 10)
+        if (number_enemy.last_number_enemy % 10 == 0)
         {
-            ScriptableObject.June.weight == 1;
-
-            else
-
-            ScriptableObject.June.weight == 0;
+            drop_gatcha.SetWeightAtIndex(1, drop_gatcha.GetWeightAtIndex(0) + 1);
+            Debug.Log("ta up le drop");
         }
-
-        if (number_enemy.enemy_dead >= 50)
-        {
-            ScriptableObject.April.weight == 10;
-
-            else
-
-            ScriptableObject.April.weight == 0;
-        }*/
     }
+
 }

@@ -8,9 +8,13 @@ public class Game_Manager : MonoBehaviour
 {
     public int money;
 
-    public int enemy_dead;
+    public int enemy_dead ;
+
+    public int last_number_enemy ;
 
     public int money_gatcha;
+
+    public Gatcha_Manager oods;
 
     public TextMeshProUGUI money_text;
 
@@ -27,7 +31,7 @@ public class Game_Manager : MonoBehaviour
     {
         money += amount;
         money_text.text = "€" + money.ToString();
-        enemy_dead ++;
+        enemy_dead ++; 
     }
 
     public void take_money(int amount)
@@ -46,5 +50,19 @@ public class Game_Manager : MonoBehaviour
     {
         money_gatcha -= amout;
         money_gatcha_text.text = "C" + money_gatcha.ToString();
+    }
+
+    private void keep_last_number_enemy_dead()
+    {
+        if (enemy_dead % 10 == 0)
+        {
+            last_number_enemy = enemy_dead;
+        }
+    }
+
+    private void Update()
+    {
+        keep_last_number_enemy_dead();
+        oods.up_oods_gatcha();
     }
 }

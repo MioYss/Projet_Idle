@@ -1512,7 +1512,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   money: 0
   enemy_dead: 0
+  last_number_enemy: 0
   money_gatcha: 0
+  oods: {fileID: 1007405200}
   money_text: {fileID: 1668606142}
   money_gatcha_text: {fileID: 1038178071}
 --- !u!4 &1007405197
@@ -1579,10 +1581,10 @@ MonoBehaviour:
   drop_gatcha:
     _weightedElementsList:
     - Element: {fileID: 11400000, guid: ee3575b984db22c44bbbf8984c489a62, type: 2}
-      Weight: 1
+      Weight: 0
     - Element: {fileID: 11400000, guid: c007d76ba54218a4aae45169f35886af, type: 2}
       Weight: 0
-  number_enemy: {fileID: 0}
+  number_enemy: {fileID: 1007405196}
 --- !u!1 &1038178069
 GameObject:
   m_ObjectHideFlags: 0
