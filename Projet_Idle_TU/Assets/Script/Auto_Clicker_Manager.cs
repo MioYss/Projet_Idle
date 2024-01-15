@@ -31,7 +31,7 @@ public class Auto_Clicker_Manager : MonoBehaviour
     {
         if(Game_Manager.instance.money >= auto_clicker_price)
         {
-            Game_Manager.instance.take_money(auto_clicker_price);
+            Game_Manager.instance.Take_money(auto_clicker_price);
             auto_clicker.Add(Time.time);
 
             quantity_text.text = "X" + auto_clicker.Count.ToString();

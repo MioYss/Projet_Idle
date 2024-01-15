@@ -67,12 +67,12 @@ public class EnnemyOnScene : MonoBehaviour
 
     public void Caught()
     {
-        Game_Manager.instance.add_money(cur_enemy.money_drop);
+        Game_Manager.instance.Add_money(cur_enemy.money_drop);
         Read_Enemy();
         //Debug.Log("hehe");
         if (Random.Range(1,100) >= 99)
         {
-            Game_Manager.instance.add_money_gatcha(cur_enemy.money_drop);
+            Game_Manager.instance.Add_money_gatcha(cur_enemy.money_drop);
         }
     }
 

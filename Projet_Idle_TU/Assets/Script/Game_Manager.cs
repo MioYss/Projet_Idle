@@ -27,42 +27,40 @@ public class Game_Manager : MonoBehaviour
         instance = this;
     }
 
-    public void add_money(int amount)
+    public void Add_money(int amount)
     {
         money += amount;
         money_text.text = "€" + money.ToString();
-        enemy_dead ++; 
+        enemy_dead ++;
+        oods.Up_oods_gatcha();
     }
 
-    public void take_money(int amount)
+    public void Take_money(int amount)
     {
         money -= amount;
         money_text.text = "€" + money.ToString();
     }
 
-    public void add_money_gatcha(int amout)
+    public void Add_money_gatcha(int amout)
     {
         money_gatcha += amout;
         money_gatcha_text.text = "C" + money_gatcha.ToString();
     }
 
-    public void take_money_gatcha(int amout)
+    public void Take_money_gatcha(int amout)
     {
         money_gatcha -= amout;
         money_gatcha_text.text = "C" + money_gatcha.ToString();
     }
 
-    private void keep_last_number_enemy_dead()
+    private void Keep_last_number_enemy_dead()
     {
-        if (enemy_dead % 10 == 0)
-        {
-            last_number_enemy = enemy_dead;
-        }
+        last_number_enemy = enemy_dead;
     }
 
     private void Update()
     {
-        keep_last_number_enemy_dead();
-        oods.up_oods_gatcha();
+        Keep_last_number_enemy_dead();
+
     }
 }

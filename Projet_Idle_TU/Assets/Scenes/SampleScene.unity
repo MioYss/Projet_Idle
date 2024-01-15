@@ -1270,7 +1270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &826283145
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1287,7 +1287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 228}
+  m_AnchoredPosition: {x: 0, y: 153}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &826283146
@@ -1511,8 +1511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
-  enemy_dead: 0
-  last_number_enemy: 0
+  enemy_dead: 1
+  last_number_enemy: 1
   money_gatcha: 0
   oods: {fileID: 1007405200}
   money_text: {fileID: 1668606142}
@@ -1572,12 +1572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e22a846a47c89940a323914527ea424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlock_gatcha:
-    _weightedElementsList:
-    - Element: {fileID: 11400000, guid: ee3575b984db22c44bbbf8984c489a62, type: 2}
-      Weight: 1
-    - Element: {fileID: 11400000, guid: c007d76ba54218a4aae45169f35886af, type: 2}
-      Weight: 5
   drop_gatcha:
     _weightedElementsList:
     - Element: {fileID: 11400000, guid: ee3575b984db22c44bbbf8984c489a62, type: 2}

@@ -12,5 +12,4 @@ public class Data_Gatcha : ScriptableObject
 
     public string perso_name, power;
 
-
 }
