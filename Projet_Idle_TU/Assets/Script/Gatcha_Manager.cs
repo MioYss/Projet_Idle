@@ -1,39 +1,59 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Gatcha_Manager : MonoBehaviour
 {
-    //public WeightedList<Data_Gatcha> unlock_gatcha;
 
     public WeightedList<Data_Gatcha> drop_gatcha;
 
     public Game_Manager number_enemy;
 
-   /* public void Unlock_Liste()
-    {
-        unlock_gatcha.GetRandomElement();
-    }*/
+    public Image message_drop_gatche_to_hide;
 
-    public void Drop_Liste()
-    {
+    public TextMeshProUGUI message_drop_gatcha;
 
-        drop_gatcha.GetRandomElement();
+    public string name_gatcha;
 
-    }
+    public int gatcha_price;
 
-    public void Up_oods_gatcha() // a faire prok quand mon ennemy meurt
+    public void Up_oods_gatcha()
     {
         Debug.Log(number_enemy.enemy_dead % 10);
         if (number_enemy.enemy_dead % 10 == 0)
         {
             drop_gatcha.SetWeightAtIndex(1, drop_gatcha.GetWeightAtIndex(1) + 1);
-
+            name_gatcha = "April";
+            StartCoroutine(Message_gatcha());
         }
 
         if (number_enemy.enemy_dead % 100 == 0)
         {
             drop_gatcha.SetWeightAtIndex(0, drop_gatcha.GetWeightAtIndex(0) + 1);
+            name_gatcha = "June";
+            StartCoroutine(Message_gatcha());
+        }
+    }
+
+    public IEnumerator Message_gatcha()
+    {
+        message_drop_gatche_to_hide.gameObject.SetActive(true);
+        message_drop_gatcha.text = "Chance Drop "+ name_gatcha + " increase by 1";
+
+        yield return new WaitForSeconds(2);
+        message_drop_gatche_to_hide.gameObject.SetActive(false);
+
+        Debug.Log("ici");
+    }
+
+    public void On_Buy_Gatcha()
+    {
+        if (Game_Manager.instance.money_gatcha >= gatcha_price)
+        {
+            Game_Manager.instance.Take_money_gatcha(gatcha_price);
+            drop_gatcha.GetRandomElement();
         }
     }
 

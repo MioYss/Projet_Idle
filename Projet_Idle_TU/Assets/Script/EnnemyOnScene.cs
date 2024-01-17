@@ -15,8 +15,6 @@ public class EnnemyOnScene : MonoBehaviour
 
     public Image sprite_enemy;
 
-    public GameObject[] enemy_prefab;
-
     public Transform canvas;
 
     public Score_Manger score_joueur;

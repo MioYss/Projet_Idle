@@ -63,4 +63,9 @@ public class Game_Manager : MonoBehaviour
         Keep_last_number_enemy_dead();
 
     }
+
+    public void Show_Gatcha()
+    {
+
+    }
 }
