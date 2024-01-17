@@ -11,7 +11,7 @@ public class Auto_Clicker_Manager : MonoBehaviour
 
     public TextMeshProUGUI quantity_text;
 
-    public EnnemyOnScene enemy;
+    public Ennemy_On_Scene enemy;
 
 
     void Update()

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Power_Manager : MonoBehaviour
 {
-    public EnnemyOnScene enemy;
+    public Ennemy_On_Scene enemy;
 
     public void Power_Explosion()
     {

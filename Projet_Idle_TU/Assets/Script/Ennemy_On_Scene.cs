@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnnemyOnScene : MonoBehaviour
+public class Ennemy_On_Scene : MonoBehaviour
 {
     public int cur_HP;
 

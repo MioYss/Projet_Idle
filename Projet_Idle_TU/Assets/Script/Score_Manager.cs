@@ -8,7 +8,7 @@ public class Score_Manger : MonoBehaviour
 {
     public TextMeshProUGUI texte_score;
     public int score_joueur;
-    public EnnemyOnScene enemy;
+    public Ennemy_On_Scene enemy;
 
 
 
