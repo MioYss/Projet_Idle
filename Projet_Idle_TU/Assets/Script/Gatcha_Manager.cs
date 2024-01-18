@@ -57,17 +57,17 @@ public class Gatcha_Manager : MonoBehaviour
             Game_Manager.instance.Take_money_gatcha(gatcha_price);
             name_charac_drop_now = drop_gatcha.GetRandomElement();
             Show_Gatcha_Charac();           
-        }
+        }   
     }
 
     public void Show_Gatcha_Charac()
     {
-        if (name_charac_drop_now == drop_gatcha[1])
+        if (name_charac_drop_now != drop_gatcha[1])
         {
             power_april.gameObject.SetActive(true);
         }
 
-        if (name_charac_drop_now == drop_gatcha[2])
+        else
         {
             power_june.gameObject.SetActive(true);
         }
