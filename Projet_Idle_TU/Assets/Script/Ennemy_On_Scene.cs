@@ -53,6 +53,11 @@ public class Ennemy_On_Scene : MonoBehaviour
     {
         Dammage(15);
     }
+
+    public void Firewall()
+    {
+        Dammage(50);
+    }
     public void Dammage()
     {
         Dammage(1);

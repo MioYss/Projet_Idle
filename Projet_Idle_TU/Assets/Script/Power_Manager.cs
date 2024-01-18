@@ -19,4 +19,10 @@ public class Power_Manager : MonoBehaviour
         enemy.Fireball();
 
     }
+
+    public void Power_Firewall()
+    {
+        enemy.Firewall();
+
+    }
 }

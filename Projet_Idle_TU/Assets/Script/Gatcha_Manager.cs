@@ -11,13 +11,15 @@ public class Gatcha_Manager : MonoBehaviour
 
     public Game_Manager number_enemy;
 
-    public Image message_drop_gatche_to_hide;
+    public Image message_drop_gatche_to_hide, power_april, power_june;
 
     public TextMeshProUGUI message_drop_gatcha;
 
     public string name_gatcha;
 
     public int gatcha_price;
+
+    public Data_Gatcha name_charac_drop_now;
 
     public void Up_oods_gatcha()
     {
@@ -53,7 +55,21 @@ public class Gatcha_Manager : MonoBehaviour
         if (Game_Manager.instance.money_gatcha >= gatcha_price)
         {
             Game_Manager.instance.Take_money_gatcha(gatcha_price);
-            drop_gatcha.GetRandomElement();
+            name_charac_drop_now = drop_gatcha.GetRandomElement();
+            Show_Gatcha_Charac();           
+        }
+    }
+
+    public void Show_Gatcha_Charac()
+    {
+        if (name_charac_drop_now == drop_gatcha[1])
+        {
+            power_april.gameObject.SetActive(true);
+        }
+
+        if (name_charac_drop_now == drop_gatcha[2])
+        {
+            power_june.gameObject.SetActive(true);
         }
     }
 

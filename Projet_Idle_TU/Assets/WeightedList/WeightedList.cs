@@ -71,6 +71,11 @@ public class WeightedList<T> : SerializedWeightedListParent
         return _weightedElementsList[index].Weight;
     }
 
+    internal void GetRandomElement(object index)
+    {
+        throw new NotImplementedException();
+    }
+
     public void SetWeightAtIndex(int index, float weight)
     {
 
